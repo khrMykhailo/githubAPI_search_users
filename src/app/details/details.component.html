@@ -1,0 +1,20 @@
+<div class="details _container">
+
+    <div class="details__content" *ngIf="$userDetails | async as userDetails">
+        <div class="details__img">
+            <img src="{{userDetails.avatar_url}}" alt="avatar">
+        </div>
+        <div class="details__text">
+            <div class="details__type mat-body-1">
+                {{userDetails.type}}
+            </div>
+            <div class="details__login mat-display-1">
+                {{userDetails.login}}
+            </div>
+            <div class="details__link mat-body-1">
+                <a href="{{userDetails.html_url}}">{{userDetails.html_url}}</a>
+            </div>
+        </div>
+
+    </div>
+</div>

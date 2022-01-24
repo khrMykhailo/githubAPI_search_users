@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+// @import "../node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css";
+html,
+body {
+    height: 100%;
+    background-color: #303030;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+._container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.closeBtn {
+    position: absolute;
+    left: 96%;
+}

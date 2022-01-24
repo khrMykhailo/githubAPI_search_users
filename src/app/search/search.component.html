@@ -1,0 +1,6 @@
+<mat-form-field appearance="fill" style="width: 100%;" [formGroup]="form">
+    <input matInput type="text" formControlName="search" (keyup.enter)="getUsers()">
+    <button mat-button matSuffix color="accent" type="submit" (click)="getUsers()" >
+        Search
+    </button>
+</mat-form-field>

@@ -1,0 +1,36 @@
+
+<div class="_container">
+    <app-search></app-search>
+    <div *ngIf="github.loading">
+        <mat-list *ngIf="github.users; else loading">
+            <button mat-mini-fab class="closeBtn" (click)="github.clearAll()">
+                <mat-icon>
+                    close
+                </mat-icon>
+            </button>
+            <div mat-subheader style="margin-top: -35px;">
+                Results:
+            </div>
+            <mat-list-item *ngFor="let user of github.users" [routerLink]="['/detail', user.login]" style="cursor: pointer;">
+                <mat-icon mat-list-icon>
+                    <img [src]="user.avatar_url" alt="" style="max-width: 100%; min-height: 100%;">
+                </mat-icon>
+                <div mat-line>
+                    {{user.login}}
+                </div>
+        <button mat-icon-button>
+        <mat-icon>
+            visibility
+        </mat-icon>
+        </button>
+    
+            </mat-list-item>
+        </mat-list>
+    
+        <ng-template #loading>
+            <mat-spinner></mat-spinner>
+        </ng-template>
+    </div>
+    
+</div>
+
